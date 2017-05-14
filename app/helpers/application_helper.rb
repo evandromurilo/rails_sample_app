@@ -8,4 +8,4 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
-endrails console
+end
