@@ -13,6 +13,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'rb-readline'
 # Use bootstrap for CSS
 gem 'bootstrap-sass'
+# Use bcrypt for password hashing
+gem 'bcrypt'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
