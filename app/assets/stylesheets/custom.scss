@@ -17,6 +17,10 @@ body {
   padding-top: 60px; 
 }
 
+@media screen and (max-width: 768px) {
+    body { padding-top: 120px; }
+}
+
 section {
   overflow: auto;
 }
