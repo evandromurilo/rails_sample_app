@@ -10,4 +10,16 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
         get root_path
         assert flash.empty?
     end
+
+    # test "login with valid information" do
+    #     get login_path
+    #     assert_template 'sessions/new'
+        
+    #     user = User.first
+    #     post login_path, params: { session: { email: user.email, 
+    #                                           password:  } }
+    #     follow_redirect!
+    #     assert_not flash.empty?
+    #     assert session[user.id]
+    # end
 end

@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     
     def create
         user = User.find_by(email: params[:session][:email].downcase)
-        if user == nil
+        if user.nil?
             flash.now[:danger] = "Email not found."
             render 'new'
         elsif !user.authenticate(params[:session][:password])
@@ -12,9 +12,9 @@ class SessionsController < ApplicationController
             render 'new'
         else
             flash[:success]= "Nice!"
+            log_in user
             redirect_to user
         end
-
     end
 
     def destroy
