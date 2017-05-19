@@ -13,14 +13,6 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-body {
-  padding-top: 60px; 
-}
-
-@media screen and (max-width: 768px) {
-    body { padding-top: 145px; }
-}
-
 section {
   overflow: auto;
 }
@@ -95,6 +87,16 @@ p {
 
 #kitten:hover {
   transform: scale(1.0, 1.0);
+}
+
+#kitten-big {
+  float: right;
+  transform: scale(1.0, 1.0);
+}
+
+#kitten-big:hover {
+  float: right;
+  transform: scale(1.5, 1.5);
 }
 
 /* footer */
