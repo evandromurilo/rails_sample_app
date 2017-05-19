@@ -1,0 +1,12 @@
+<% provide title: "Settings" %>
+<div class="row">
+    <div class="col-md-3 col-md-offset-0">
+        <%= form_tag do %> 
+            <%= radio_button_tag(:animal, "dog") %>
+            <%= label_tag(:animal_dog, "dog") %>
+            <%= radio_button_tag(:animal, "kitten") %>
+            <%= label_tag(:animal_kitten, "kitten") %>
+            <%= submit_tag("Submit") %>
+        <% end %>
+    </div>
+</div>
