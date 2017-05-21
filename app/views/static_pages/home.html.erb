@@ -13,7 +13,13 @@
 <%= link_to image_tag("rails.png", alt: "Rails logo"), 'http://rubyonrails.org/', id: "rails_logo" %>
 
 <% if logged_in? %>
-  <%= image_tag("kitten.png", alt: "Every webpage needs a kitten.", id: "kitten-big") %>
+    <% if current_user.animal == "cat" %>
+        <%= image_tag("kitten.png", alt: "Every webpage needs a kitten.", id: "kitten-big") %>
+    <% elsif current_user.animal == "rat" %>
+        <%= image_tag("rat.png", alt: "Rats are cute.", id: "rat") %>
+    <% else %>
+        <%= image_tag("dog.jpg", alt: "Good dog.", id: "dog") %>
+    <% end %>
 <% else %>
   <%= image_tag("kitten.png", alt: "Every webpage needs a kitten.", id: "kitten") %>
 <% end %>

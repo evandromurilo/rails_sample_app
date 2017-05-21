@@ -78,7 +78,17 @@ p {
   display: none;
 }
 
-/* kitten */
+/* animal */
+
+#dog, #rat {
+  width: 200px;
+  height: 200px;
+  float: right;
+}
+
+#dog:hover, #rat:hover {
+  transform: scale(1.3, 1.3);
+}
 
 #kitten {
   float: right;
@@ -185,6 +195,15 @@ input {
 }
 
 .checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+.radio {
   margin-top: -10px;
   margin-bottom: 10px;
   span {

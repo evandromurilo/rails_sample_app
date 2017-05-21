@@ -23,15 +23,18 @@ class UsersController < ApplicationController
     end
 
     def settings
+        @user = current_user
     end
 
     def update
+        current_user.update_attribute(:animal, user_params[:animal])
+        redirect_to settings_path
     end
 
     private
 
         def user_params
             params.require(:user).permit(:name, :email, :password,
-                                         :password_confirmation)
+                                         :password_confirmation, :animal)
         end
 end
