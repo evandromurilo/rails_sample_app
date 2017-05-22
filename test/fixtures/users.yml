@@ -5,6 +5,11 @@ nathalya:
   email: nat@example.com
   password_digest: <%= User.digest('12345678') %>
 
+beatriz:
+  name: Beatriz
+  email: beatriz@example.com
+  password_digest: <%= User.digest('12345678') %>
+
 # two:
 #   name: MyString
 #   email: MyString
