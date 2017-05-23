@@ -17,6 +17,10 @@ gem 'rb-readline'
 gem 'bootstrap-sass'
 # Use bcrypt for password hashing
 gem 'bcrypt'
+# Use faker for creating sample users
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

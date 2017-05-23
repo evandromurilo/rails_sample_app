@@ -10,6 +10,14 @@ beatriz:
   email: beatriz@example.com
   password_digest: <%= User.digest('12345678') %>
 
-# two:
-#   name: MyString
-#   email: MyString
+mariana:
+  name: Mariana
+  email: mariana@examplecom
+  password_digest: <%= User.digest('12345678') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com}" %>
+  password_digest: <%= User.digest('12345678') %>
+<% end %>
