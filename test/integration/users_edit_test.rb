@@ -48,4 +48,17 @@ class UsersEditTest < ActionDispatch::IntegrationTest
                                                   email: @user.email } }
         assert_redirected_to root_url
     end
+
+    test "change animal to cat, dog, and rat" do
+        log_in_as @user, password: "12345678"
+        patch user_path(@user), params: { user: { animal: "cat" } }
+        get root_path
+        assert_select "#kitten-big"
+        patch user_path(@user), params: { user: { animal: "dog" } }
+        get root_path
+        assert_select "#dog"
+        patch user_path(@user), params: { user: { animal: "rat" } }
+        get root_path
+        assert_select "#rat"
+    end
 end

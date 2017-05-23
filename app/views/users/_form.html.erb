@@ -14,5 +14,8 @@
     <%= f.password_field :password_confirmation, 
         class: 'form-control' %>
 
+    <%= f.label :animal, class: 'dropdown'%>
+    <%= f.select :animal, ["cat", "dog", "rat"] %>
+
     <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

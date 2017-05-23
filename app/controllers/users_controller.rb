@@ -26,18 +26,11 @@ class UsersController < ApplicationController
         end
     end
 
-    def settings
-        @user = current_user
-    end
-
     def edit
         @user = User.find(params[:id])
     end
 
     def update
-        # current_user.update_attribute(:animal, user_params[:animal])
-        # redirect_to settings_path
-
         @user = User.find(params[:id])
         if @user.update_attributes(user_params)
             flash[:success] = "Profile updated"
